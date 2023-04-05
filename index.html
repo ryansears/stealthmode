@@ -11,10 +11,33 @@
       color: white;
       margin: 0;
       padding: 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    body::before {
+      content: "";
+      background-image: url('https://raw.githubusercontent.com/ryansears/stealthmode/main/images/black-cubes-26201.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      opacity: 0.5;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
     }
 
     main {
       margin: 150px;
+      max-width: 1200px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
     }
 
     .logo {
@@ -25,6 +48,7 @@
 
     h1, h2 {
       text-align: center;
+      margin-bottom: 40px;
     }
 
     .portfolio-row {
@@ -34,6 +58,15 @@
 
     .portfolio-row h3 {
       margin: 0 0 10px;
+    }
+
+    @media (max-width: 768px) {
+      main {
+        margin: 50px;
+      }
+      h1, h2 {
+        font-size: 1.5em;
+      }
     }
   </style>
 </head>
